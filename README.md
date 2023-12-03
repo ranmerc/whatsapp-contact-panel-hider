@@ -39,7 +39,7 @@ You can press the button again to expand the left panel.
 2. Build the extension
 
 ```bash
-  web-ext build --ignore-files "./images" "README.md"
+  web-ext build --ignore-files "./images" "README.md" -n whatsapp_contacts_panel_hider-${version}.zip
 ```
 
 This will create a deployable zip file in `web-ext-artifacts` directory. You can install this zip file in Firefox manually.
