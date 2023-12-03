@@ -77,7 +77,8 @@ const addPanelIcon = async () => {
   iconButton.innerHTML = hidePanelSVG;
   iconContainer.appendChild(iconButton);
 
-  const panel = await waitForElm(`.two > div:nth-of-type(4)`);
+  const sidePanel = await waitForElm('#side');
+  const panel = sidePanel.parentElement;
   const headPanel = await waitForElm('header');
   panel.style.transition = 'max-width 150ms ease-in';
 
