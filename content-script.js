@@ -33,7 +33,7 @@ const addVisibilityIcon = async () => {
   iconButton.innerHTML = hideSVG;
   iconHeader.prepend(iconButton);
 
-  const sidePanel = document.querySelector(`#side`);
+  const sidePanel = await waitForElm(`#side`);
 
   iconButton.addEventListener('click', () => {
     if (!isClosed) {
