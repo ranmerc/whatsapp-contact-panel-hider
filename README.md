@@ -12,9 +12,9 @@ Not published for Chrome but it works over there too.
 
 This extension adds a new button to the UI which you can click to hide the contact panel.
 
-![Before clicking hide button](./images/before_hide.jpg)
+![Before clicking hide button](./images/before_hide.png)
 
-![After clicking hide button](./images/after_hide.jpg)
+![After clicking hide button](./images/after_hide.png)
 
 You can press the button again to unhide the side panel.
 
