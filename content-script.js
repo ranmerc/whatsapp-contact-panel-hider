@@ -61,6 +61,7 @@ const addPanelIcon = async () => {
   iconContainer.style.height = '100px';
   iconContainer.style.borderRadius = '0px 5px 5px 0px';
   iconContainer.style.backgroundColor = 'var(--background-default)';
+  iconContainer.style.border = '1px solid var(--conversation-header-border)';
   iconContainer.style.opacity = '0';
   iconContainer.style.display = 'grid';
 
