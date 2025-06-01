@@ -83,6 +83,10 @@ const addPanelIcon = async () => {
   const panel = sidePanel.parentElement;
   const sideHeadPanel = await waitForElm('header');
   const topHeadPanel = await waitForElm('header:has(h1)');
+  // For whatever reason this element has a border which is used a border for
+  // `sideHeadPanel` here, so hiding just the `sideHeadPanel` is not enough
+  // we need to disable the border on this to remove it completely.
+  const borderDiv = await waitForElm('header ~ div > div:first-of-type');
   panel.style.transition = 'max-width 150ms ease-in';
 
   panel.prepend(iconContainer);
@@ -92,12 +96,14 @@ const addPanelIcon = async () => {
       panel.style.maxWidth = '0';
       sideHeadPanel.style.display = 'none';
       topHeadPanel.style.display = 'none';
+      borderDiv.style.borderLeftWidth = '0px';
       iconButton.innerHTML = showPanelSVG;
       isClosed = true;
     } else {
       panel.style.removeProperty('max-width');
       sideHeadPanel.style.removeProperty('display');
       topHeadPanel.style.removeProperty('display');
+      borderDiv.style.removeProperty('border-left-width');
       iconButton.innerHTML = hidePanelSVG;
       isClosed = false;
     }
