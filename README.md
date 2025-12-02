@@ -26,7 +26,7 @@ You can also collapse the whole left panel by hovering over and clicking on the 
 
 ![After clicking collapse button](./images/after_collapse.png)
 
-You can press the button again to expand the left panel. Suggestion by [@mclorand](https://github.com/mclorand).
+You can press the button again to expand the left panel. Suggestion by [@peter-lyons-kehl](https://github.com/peter-lyons-kehl).
 
 There is also a setting to collapse the contact menu only leaving the side panel intact. You can bring up this settings by clicking on the extension icon in your toolbar.
 
