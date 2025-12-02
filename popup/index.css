@@ -1,0 +1,82 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  color-scheme: dark light;
+
+  --global-padding-block: 0.75rem;
+  --global-padding-inline: 0.75rem;
+}
+
+body {
+  width: 300px;
+  font-family: sans-serif;
+}
+
+header {
+  padding: var(--global-padding-block) var(--global-padding-inline);
+}
+
+h1 {
+  font-size: 1.4rem;
+}
+
+main {
+  padding: var(--global-padding-block) var(--global-padding-inline);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+}
+
+li {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.5rem;
+
+  > select {
+    height: 2lh;
+    padding-inline-start: 0.25rem;
+  }
+
+  > label {
+    font-size: 1rem;
+  }
+}
+
+li ul {
+  list-style: none;
+}
+
+button {
+  width: 100%;
+  font-size: 1rem;
+  padding-block: 0.5rem;
+}
+
+#submit-feedback {
+  width: 100%;
+  text-align: center;
+  padding-block: 0.75rem;
+  border: 1px solid;
+  border-radius: 5px;
+
+  &:empty {
+    display: none;
+  }
+
+  &.error {
+    color: red;
+  }
+
+  &.success {
+    color: green;
+  }
+}

@@ -11,5 +11,16 @@
       "matches": ["https://web.whatsapp.com/"],
       "js": ["content-script.js"]
     }
-  ]
+  ],
+  "browser_action": {
+    "default_icon": "icons/icon-48.png",
+    "default_title": "Whatsapp Contacts Panel Hider",
+    "default_popup": "popup/index.html"
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "@whatsapp-contact-panel-hider.ranmerc"
+    }
+  },
+  "permissions": ["storage"]
 }

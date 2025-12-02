@@ -91,10 +91,27 @@ const addPanelIcon = async () => {
 
   panel.prepend(iconContainer);
 
-  iconButton.addEventListener('click', () => {
+  iconButton.addEventListener('click', async () => {
+    /** @type {'contact' | 'both'} */
+    let sidebarCollapseLevel = 'both';
+
+    // Try Read from sync storage
+    try {
+      const settings = await browser.storage.sync.get({
+        sidebarCollapseLevel: 'both',
+      });
+
+      sidebarCollapseLevel = settings.sidebarCollapseLevel;
+    } catch {
+      // We can just default to 'both' if reading from
+      // sync storage fails, for any reason
+    }
+
     if (!isClosed) {
       panel.style.maxWidth = '0';
-      sideHeadPanel.style.display = 'none';
+      if (sidebarCollapseLevel === 'both') {
+        sideHeadPanel.style.display = 'none';
+      }
       topHeadPanel.style.display = 'none';
       borderDiv.style.borderLeftWidth = '0px';
       iconButton.innerHTML = showPanelSVG;

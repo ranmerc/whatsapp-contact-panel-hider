@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="dark light" />
+    <link rel="stylesheet" href="./index.css" />
+    <title>Whatsapp Contact Panel Hider Settings</title>
+  </head>
+  <body>
+    <header>
+      <h1>Settings</h1>
+    </header>
+
+    <hr />
+
+    <main>
+      <form>
+        <ul>
+          <li>
+            <label for="sidebar-collapse-level">Sidebar Collapse level</label>
+            <select id="sidebar-collapse-level">
+              <option value="contact">Contact menu only</option>
+              <option value="both">Contact and Side menu</option>
+            </select>
+          </li>
+        </ul>
+
+        <div id="submit-feedback" role="alert"></div>
+
+        <button type="submit">Save</button>
+      </form>
+    </main>
+
+    <script src="./index.js"></script>
+  </body>
+</html>
