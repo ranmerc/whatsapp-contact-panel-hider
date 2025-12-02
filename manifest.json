@@ -19,7 +19,7 @@
   },
   "browser_specific_settings": {
     "gecko": {
-      "id": "@whatsapp-contact-panel-hider.ranmerc",
+      "id": "{e533d8e4-8a76-49fc-be8b-1dfc5e35a9c9}",
       "data_collection_permissions": {
         "required": ["none"]
       }
