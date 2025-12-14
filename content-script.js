@@ -82,7 +82,7 @@ const addPanelIcon = async () => {
   const sidePanel = await waitForElm('#side');
   const panel = sidePanel.parentElement;
   const sideHeadPanel = await waitForElm('header');
-  const topHeadPanel = await waitForElm('header:has(h1)');
+  const topHeadPanel = await waitForElm('header:has(h2)');
   // For whatever reason this element has a border which is used a border for
   // `sideHeadPanel` here, so hiding just the `sideHeadPanel` is not enough
   // we need to disable the border on this to remove it completely.
